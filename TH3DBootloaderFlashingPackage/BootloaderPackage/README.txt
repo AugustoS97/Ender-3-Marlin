@@ -1,0 +1,1 @@
+This package is only for flashing bootloaders on boards that need them. Visit https://Bootloader.TH3DStudio.com for full directions on how to use this package.
