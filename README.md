@@ -19,6 +19,7 @@ Conjunto de ficheros Marlin para Ender 3 y Ender 3 Pro con diferentes extras y c
 - En la configuración NOZZLE PARK, debe indicarse la coordenada 0,0,0 : '#define NOZZLE_PARK_POINT { 0, 0, 0}'
 - En mi caso, mi sensor de filamento debía trabajar con lógica invertida. Por tanto, '#define FIL_RUNOUT_INVERTING true'. Además, modifico el GCODE de cambio de filamento a '#define FILAMENT_RUNOUT_SCRIPT "M25 P1"' por el poblema con M600.
 - Puede corregirse el offset de la cama desde 'Tune' y luego guardar la configuración en la EEPROM desde 'Config'.
+- WARNING: Si no para al hacer homing, deben darse la vuelta de los dos cables del ENDSTOP (negro y el blanco).
 
 
 ## Version con BL-Touch y Sensor de Filamento
