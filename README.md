@@ -26,6 +26,10 @@ Conjunto de ficheros Marlin para Ender 3 y Ender 3 Pro con diferentes extras y c
 - Implementa las configuraciones para usar el BL-Touch con el sensor de filamento. Nuevamente, el GCODE en caso de parada debe ser M25 P1 en lugar de M600.
 - SENSOR BL-TOUCH SE CONECTA AL PIN 27 (CON EL EXTENSOR DE LA PANTALLA ADQUIRIDO)
 - Puede ajustarse siguiendo el vídeo https://www.youtube.com/watch?v=sUlqrSq6LeY&t=581s y teniendo en cuenta los consideraciones del caso anterior.
+- Se puede activar la opcion de LCD BED LEVELING para tener un menu que permita hacer el bed level desde pantalla (es opcional).
+- Se debe crear el GCODE con una linea G29 de hacer bed leveling justo despues de la linea G28.
+- Para ajustar el offset, hay que imprimir un modelo de altura de capa 0.2 y ponerlo a imprimir. Mientras va imprimiendo, se debe ir a Control -> Motion -> Probe Z offset y ajustarlo hasta que la impresión sea adecuado en cuanto a altura de capa. Una vez conseguido el ajuste correcto, se debe guardar en la EEPROM, desde Control -> Store Settings. 
+- Se debe tener en cuenta que el almacenamiento en EEPROM no devuelve mensaje al realizarse.
 
 ## Versión solo con sensor de Filamento
 
