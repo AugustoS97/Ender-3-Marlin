@@ -31,6 +31,9 @@ Conjunto de ficheros Marlin para Ender 3 y Ender 3 Pro con diferentes extras y c
 - Se debe crear el GCODE con una linea G29 de hacer bed leveling justo despues de la linea G28.
 - Para ajustar el offset, hay que imprimir un modelo de altura de capa 0.2 y ponerlo a imprimir. Mientras va imprimiendo, se debe ir a Control -> Motion -> Probe Z offset y ajustarlo hasta que la impresión sea adecuado en cuanto a altura de capa. Una vez conseguido el ajuste correcto, se debe guardar en la EEPROM, desde Control -> Store Settings. 
 - Se debe tener en cuenta que el almacenamiento en EEPROM no devuelve mensaje al realizarse.
+- Se habilita el autonivelado con el GCODE G26
+- Se puede configurar la altura máxima a la que hace un fundido del autolevel con el GCODE inicial M420 Z'distancia en mm'. Por ejemplo M420 Z250 para 25 cm. Si se indica M420 Z0 las imperfecciones se mantienen hasta el final. Se reocmienda poner M420 Z20 o Z40 para corregi rpoco a poco hasta los 40 mm.
+
 
 ## Versión solo con sensor de Filamento
 
