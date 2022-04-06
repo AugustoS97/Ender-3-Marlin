@@ -37,10 +37,10 @@
   #define MSG_BACK                            _UxGT("Back")
 #endif
 #ifndef MSG_SD_INSERTED
-  #define MSG_SD_INSERTED                     _UxGT("Card inserted")
+  #define MSG_SD_INSERTED                     _UxGT("SD inserted")
 #endif
 #ifndef MSG_SD_REMOVED
-  #define MSG_SD_REMOVED                      _UxGT("Card removed")
+  #define MSG_SD_REMOVED                      _UxGT("SD removed")
 #endif
 #ifndef MSG_LCD_ENDSTOPS
   #define MSG_LCD_ENDSTOPS                    _UxGT("Endstops") // Max length 8 characters
@@ -564,10 +564,10 @@
   #define MSG_STOP_PRINT                      _UxGT("Stop print")
 #endif
 #ifndef MSG_CARD_MENU
-  #define MSG_CARD_MENU                       _UxGT("Print from TF")
+  #define MSG_CARD_MENU                       _UxGT("Print from SD")
 #endif
 #ifndef MSG_NO_CARD
-  #define MSG_NO_CARD                         _UxGT("No TF card")
+  #define MSG_NO_CARD                         _UxGT("No SD")
 #endif
 #ifndef MSG_DWELL
   #define MSG_DWELL                           _UxGT("Sleep...")
@@ -621,10 +621,10 @@
   #define MSG_FILAMENTCHANGE                  _UxGT("Change filament")
 #endif
 #ifndef MSG_INIT_SDCARD
-  #define MSG_INIT_SDCARD                     _UxGT("Init. TF card")
+  #define MSG_INIT_SDCARD                     _UxGT("Init. SD")
 #endif
 #ifndef MSG_CNG_SDCARD
-  #define MSG_CNG_SDCARD                      _UxGT("Change TF card")
+  #define MSG_CNG_SDCARD                      _UxGT("Change SD")
 #endif
 #ifndef MSG_ZPROBE_OUT
   #define MSG_ZPROBE_OUT                      _UxGT("Z probe out. bed")
@@ -636,13 +636,13 @@
   #define MSG_BLTOUCH_SELFTEST                _UxGT("BLTouch Self-Test")
 #endif
 #ifndef MSG_BLTOUCH_RESET
-  #define MSG_BLTOUCH_RESET                   _UxGT("Reset BLTouch")
+  #define MSG_BLTOUCH_RESET                   _UxGT("Reset BLT")
 #endif
 #ifndef MSG_BLTOUCH_DEPLOY
-  #define MSG_BLTOUCH_DEPLOY                  _UxGT("Deploy BLTouch")
+  #define MSG_BLTOUCH_DEPLOY                  _UxGT("Deploy BLT")
 #endif
 #ifndef MSG_BLTOUCH_STOW
-  #define MSG_BLTOUCH_STOW                    _UxGT("Stow BLTouch")
+  #define MSG_BLTOUCH_STOW                    _UxGT("Stow BLT")
 #endif
 #ifndef MSG_HOME
   #define MSG_HOME                            _UxGT("Home") // Used as MSG_HOME " " MSG_X MSG_Y MSG_Z " " MSG_FIRST

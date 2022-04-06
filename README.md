@@ -43,6 +43,11 @@ Conjunto de ficheros Marlin para Ender 3 y Ender 3 Pro con diferentes extras y c
 - Presenta un bug al hacer el cambio de filamento con el M600. Por ello, se debe modificar el GCODE para los cambios de filamento por el siguiente 'M25 P1; PAUSA Y PURGA POSTERIOR'
 - En mi caso, mi sensor de filamento debía trabajar con lógica invertida. Por tanto, '#define FIL_RUNOUT_INVERTING true'. Además, modifico el GCODE de cambio de filamento a '#define FILAMENT_RUNOUT_SCRIPT "M25 P1"' por el poblema con M600.
 
+## Version recomendada para instalar con BLTouch
+
+- Se localiza en el directorio Creality Original y corresponde con la versión original de Creality (v1.1.6) adaptada para incluir el sensor BLTouch y no perder ninguna funcionalidad.
+- No incorpora la detección de fin de filamento.
+
 ## Enlaces de info adicionales
 
 - https://www.youtube.com/watch?v=sUlqrSq6LeY 
