@@ -1,13 +1,14 @@
 # Ender-3-Marlin
 
 Conjunto de ficheros Marlin para Ender 3 y Ender 3 Pro con diferentes extras y configuraciones.
-
 ## Versión original de Ender y Versión de Ender con BL-Touch
 
-- Implementan las configuraciones de la versión original instalada en las impresoras (Marlin 1.0)
+- Implementan las configuraciones de la versión original instalada en las impresoras (Marlin 1.1.6)
+- Se localizan en el directorio 'CrealityOriginal/Ender-3_1.1.6.2V_Source Code' y en 'CrealitityOriginal/Marlin Ender Original v1.1.6.2 BLTouch'.
 
-## Version con MESH BED LEVEL (Ajuste Manual)
+## Última version con MESH BED LEVEL (Ajuste Manual)
 
+- Se localiza en el Directorio 'Marling-1.1.9- Sensor Filamento Cama Manual'.
 - Requiere activar #define MESH_BED_LEVELING y #define LCD_BED_LEVELING
 - En nuestro Slicer. En el GCODE inicial, justo después de G28 ; home all axis se debe escribir la linea M420 S1; Load BED Mesh
 - Presenta un bug al hacer el cambio de filamento con el M600. Por ello, se debe modificar el GCODE para los cambios de filamento por el siguiente 'M25 P1; PAUSA Y PURGA POSTERIOR'
@@ -22,8 +23,9 @@ Conjunto de ficheros Marlin para Ender 3 y Ender 3 Pro con diferentes extras y c
 - WARNING: Si no para al hacer homing, deben darse la vuelta de los dos cables del ENDSTOP (negro y el blanco).
 
 
-## Version con BL-Touch y Sensor de Filamento
+## Última version con BL-Touch y Sensor de Filamento
 
+- Se localiza en 'Marlin-1.1.9- Sensor Filamento BLTouch'
 - Implementa las configuraciones para usar el BL-Touch con el sensor de filamento. Nuevamente, el GCODE en caso de parada debe ser M25 P1 en lugar de M600.
 - SENSOR BL-TOUCH SE CONECTA AL PIN 27 (CON EL EXTENSOR DE LA PANTALLA ADQUIRIDO)
 - Puede ajustarse siguiendo el vídeo https://www.youtube.com/watch?v=sUlqrSq6LeY&t=581s y teniendo en cuenta los consideraciones del caso anterior.
@@ -35,21 +37,32 @@ Conjunto de ficheros Marlin para Ender 3 y Ender 3 Pro con diferentes extras y c
 - Se puede configurar la altura máxima a la que hace un fundido del autolevel con el GCODE inicial M420 Z'distancia en mm'. Por ejemplo M420 Z250 para 25 cm. Si se indica M420 Z0 las imperfecciones se mantienen hasta el final. Se reocmienda poner M420 Z20 o Z40 para corregi rpoco a poco hasta los 40 mm.
 
 
-## Versión solo con sensor de Filamento
+## Última versión solo con sensor de Filamento
 
+- Se localiza en 'Marlin-1.1.7 - Sensor Filamento'.
 - Incorpora sensor de fin de filamento, instalado en el pin 29 (debe soldarse un terminal en la PCB en la versión 1.1.4 de Creality) . Para descativarlo basta con comentar la línea #define FILAMENT_RUNOUT_SENSOR
 - EL SENSOR DE FILAMENTO SE CONECTA PONIENDO NO A VCC Y NC A GND.
 - En la configuración NOZZLE PARK, debe indicarse la coordenada 0,0,0 : '#define NOZZLE_PARK_POINT { 0, 0, 0}'
 - Presenta un bug al hacer el cambio de filamento con el M600. Por ello, se debe modificar el GCODE para los cambios de filamento por el siguiente 'M25 P1; PAUSA Y PURGA POSTERIOR'
 - En mi caso, mi sensor de filamento debía trabajar con lógica invertida. Por tanto, '#define FIL_RUNOUT_INVERTING true'. Además, modifico el GCODE de cambio de filamento a '#define FILAMENT_RUNOUT_SCRIPT "M25 P1"' por el poblema con M600.
 
+
+
 ## Version recomendada para instalar con BLTouch
 
 - Se localiza en el directorio Creality Original y corresponde con la versión original de Creality (v1.1.6) adaptada para incluir el sensor BLTouch y no perder ninguna funcionalidad.
 - No incorpora la detección de fin de filamento.
 
-## Enlaces de info adicionales
+## Pasos del Extrusor
+- Con el extrusor original de engranaje simple, los pasos son 93.0
+- Con el extrusor de Doble Engranaje Metálico, los pasos son 137.5
+- Se modifican en la línea #define DEFAULT_AXIS_STEPS_PER_UNIT dentro de Configuration.h
 
+## Carga del firmware
+- Es posble hacer la carga desde la herramienta proporcionada en TH3DBootloaderFlashingPackage que incluye un IDE de Arduino con todas las librerías necesarias, así como la placa Sanguino empleada por la Ender 3.
+- Se proporciona la herramienta Zadig-2.7 para poder instalar correctamente el Driver del Programador ISP y poder cargar posteriormente el Bootloader.
+
+## Enlaces de info adicionales
 - https://www.youtube.com/watch?v=sUlqrSq6LeY 
 - https://www.youtube.com/watch?v=MFZ5jEtLg0Q&feature=youtu.be
 - https://www.youtube.com/watch?v=r-oeuuIE2TA
